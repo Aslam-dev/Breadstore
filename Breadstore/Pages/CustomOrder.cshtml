@@ -1,0 +1,29 @@
+﻿@page
+@model Breadstore.Pages.CustomOrderModel
+@{
+}
+<div class="text-center">
+    <h1 class="text-capitalize">Create Your Custom Order</h1>
+
+    <form method="post">
+        <label>Customer Name:</label>
+        <input type="text" class="form-control-sm mb-1" placeholder="Your Name..."  asp-for="Bread.BreadName"/><br/>
+        <label>Bread Type</label>
+        <select class="form-control-sm" asp-for="Bread.ImageName">
+            <option value="FlatBread">Flat Bread</option>
+            <option value="FrenchBread">French Bread</option>
+            <option value="MultiGrainBread">Multi Grain Bread</option>
+            <option value="RyeBread">Rye Bread</option>
+            <option value="WheatBread">Wheat Bread</option>
+            <option value="WhiteBread">White Bread</option>
+        </select> <br/>
+          
+        <label>Slect Size:</label>
+        <select class="form-control-sm" asp-for="Bread.BreadSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select><br/>
+         <button class="btn btn-danger m-2" >Confirm Order</button>
+    </form>
+</div>

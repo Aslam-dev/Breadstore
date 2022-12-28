@@ -1,0 +1,30 @@
+﻿@page
+@model Breadstore.Pages.ProductsModel
+@{
+}
+
+<div class="text-center">
+    <h1>We have varityof option for fill your teast</h1>
+
+    <div class="row">
+        @foreach(var item in Model.BreadModels)
+        {
+            var imagepath = "./images/" + (item.ImageName + ".jpg");
+           
+        <div class="col-4">
+            <img src="@imagepath" class="w-100" />
+            <h5>@item.BreadName</h5>
+            <h6>@item.BreadSize</h6>
+            <h6>@item.BreadPrice $</h6>
+        </div>
+        }
+        <!---
+        <div class="col-4">
+            <img src="./Images/FlatBread.jpg" class="w-100" />
+            <h5>Flat Bread</h5>
+            <h6>Small</h6>
+            <h6>25$</h6>
+        </div>
+            -->
+    </div>
+</div>
